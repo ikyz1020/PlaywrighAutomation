@@ -1,0 +1,15 @@
+Status: 201
+Response: {
+  statusCode: 201,
+  data: {
+    _id: '6a9522d71c1ac490997bb7e8',
+    username: 'khan1234567',
+    email: 'ikyz123@gmail.com',
+    fullname: 'Ismailkhan',
+    createdAt: '2026-08-31T06:44:39.368Z',
+    updatedAt: '2026-08-31T06:44:39.368Z',
+    __v: 0
+  },
+  message: 'User registered Successfully',
+  success: true
+}

@@ -1,0 +1,7 @@
+Status: 404
+Response: {
+  statusCode: 404,
+  success: false,
+  message: "Can't find /api/v1/users/register123 on the server",
+  errors: []
+}

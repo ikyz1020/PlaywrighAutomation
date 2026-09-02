@@ -1,0 +1,62 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\api.spec.js >> Get All Books API Test
+- Location: tests\api.spec.js:22:5
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 201
+Received: 409
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | //1
+  4  | // test('Get All Books API Test', async ({request}) => {
+  5  | // const response = await request.get('https://demoqa.com/BookStore/v1/Books');
+  6  | // console.log(await response.json());
+  7  | // expect(response.status()).toBe(200);
+  8  |  
+  9  |  
+  10 | // });
+  11 | 
+  12 | //2 fail due to Book
+  13 | // test('Get All Books API Test', async ({request}) => {
+  14 | // const response = await request.get('https://demoqa.com/BookStore/v1/Book');
+  15 | // console.log(await response.json());
+  16 | // expect(response.status()).toBe(200);
+  17 |  
+  18 |  
+  19 | // });
+  20 | 
+  21 | // 3 post data 
+  22 | test('Get All Books API Test', async ({request}) => {
+  23 | const response = await request.post('https://api-testing-postman.vercel.app/api/v1/users/register',{
+  24 | data:{
+  25 |   "fullname": "Asim Ali",
+  26 |   "email": "test@example.com",
+  27 |   "username": "asimali0123",
+  28 |   "password": "asimali12356"
+  29 | }
+  30 | 
+  31 | });
+  32 | console.log(await response.json());
+> 33 | expect(response.status()).toBe(201);
+     |                           ^ Error: expect(received).toBe(expected) // Object.is equality
+  34 |  
+  35 |  
+  36 | });
+  37 | 
+```

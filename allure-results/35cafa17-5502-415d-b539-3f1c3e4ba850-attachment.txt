@@ -1,0 +1,14 @@
+{
+  statusCode: 201,
+  data: {
+    _id: '6a952fd1c6349bb44fd16796',
+    username: 'asimali01',
+    email: 'asimali@gmail.com',
+    fullname: 'Asim Ali',
+    createdAt: '2026-08-31T07:40:01.648Z',
+    updatedAt: '2026-08-31T07:40:01.648Z',
+    __v: 0
+  },
+  message: 'User registered Successfully',
+  success: true
+}

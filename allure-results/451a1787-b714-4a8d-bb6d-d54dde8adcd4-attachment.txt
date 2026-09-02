@@ -1,0 +1,7 @@
+Status: 409
+Response: {
+  statusCode: 409,
+  success: false,
+  message: 'User already exists',
+  errors: []
+}
