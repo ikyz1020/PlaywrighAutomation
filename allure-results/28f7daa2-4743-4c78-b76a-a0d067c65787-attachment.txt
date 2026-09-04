@@ -1,0 +1,2 @@
+Register Status: 201
+Register Response: {"statusCode":201,"data":{"_id":"6a9a33908a14888ba6d40d3f","username":"ismailkhan1788490636241","email":"ismailkhan1788490636241@gmail.com","fullname":"Ismail Khan","createdAt":"2026-09-04T02:57:20.302Z","updatedAt":"2026-09-04T02:57:20.302Z","__v":0},"message":"User registered Successfully","success":true}

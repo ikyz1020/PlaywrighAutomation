@@ -1,0 +1,7 @@
+Register Status: 500
+Register Response: A server error has occurred
+
+FUNCTION_INVOCATION_FAILED
+
+sin1::dfwxp-1788473658983-e5401a7dd829
+

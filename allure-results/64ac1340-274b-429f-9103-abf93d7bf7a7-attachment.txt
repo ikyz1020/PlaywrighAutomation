@@ -1,0 +1,19 @@
+Updated Login Status: 200
+Updated Login Response: {
+  statusCode: 200,
+  data: {
+    user: {
+      _id: '6a99e5b9ed46d10482b4d6f2',
+      username: 'ismailkhanupdated1788470716069',
+      email: 'ismailkhanupdated1788470716069@gmail.com',
+      fullname: 'Ismail Khan Updated',
+      createdAt: '2026-09-03T21:25:13.348Z',
+      updatedAt: '2026-09-03T21:25:17.515Z',
+      __v: 0
+    },
+    accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk5ZTViOWVkNDZkMTA0ODJiNGQ2ZjIiLCJlbWFpbCI6ImlzbWFpbGtoYW51cGRhdGVkMTc4ODQ3MDcxNjA2OUBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IklzbWFpbCBLaGFuIFVwZGF0ZWQiLCJpYXQiOjE3ODg0NzA3MTcsImV4cCI6MTc4ODU1NzExN30.b9Cn95a_9pRLiZgtgTzUYgmWxLqfkOmAsFKeuUKdzyE',
+    refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk5ZTViOWVkNDZkMTA0ODJiNGQ2ZjIiLCJlbWFpbCI6ImlzbWFpbGtoYW51cGRhdGVkMTc4ODQ3MDcxNjA2OUBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IklzbWFpbCBLaGFuIFVwZGF0ZWQiLCJpYXQiOjE3ODg0NzA3MTcsImV4cCI6MTc4OTMzNDcxN30.kEZxqfA2HOlquKrC7PYI3QrAO3wGAZrr-C9SjJBH95A'
+  },
+  message: 'User Logged in successfully',
+  success: true
+}

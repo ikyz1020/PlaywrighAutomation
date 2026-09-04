@@ -1,0 +1,15 @@
+Get Status: 200
+Get Response: {
+  statusCode: 200,
+  data: {
+    _id: '6a99f15357bac5c869d40c18',
+    username: 'ismailkhan1788473679999',
+    email: 'ismailkhan1788473679999@gmail.com',
+    fullname: 'Ismail Khan',
+    createdAt: '2026-09-03T22:14:43.831Z',
+    updatedAt: '2026-09-03T22:14:45.160Z',
+    __v: 0
+  },
+  message: 'Current user fetched successfully',
+  success: true
+}

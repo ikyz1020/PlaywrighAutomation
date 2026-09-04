@@ -1,0 +1,14 @@
+Login Status: 404
+Login Response: {
+  statusCode: 404,
+  success: false,
+  message: 'User does not Exists',
+  errors: []
+}
+Update Status: 401
+Update Response: {
+  statusCode: 401,
+  success: false,
+  message: 'jwt malformed',
+  errors: []
+}

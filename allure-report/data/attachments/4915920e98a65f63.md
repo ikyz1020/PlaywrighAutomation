@@ -1,0 +1,159 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\api.spec.js >> Update User API Test
+- Location: tests\api.spec.js:104:5
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 200
+Received: 401
+```
+
+# Test source
+
+```ts
+  42  | //       }
+  43  | //     }
+  44  | //   );
+  45  |  
+  46  | //   const tokenData = await tokenResponse.json();
+  47  | //   const token = tokenData.token;
+  48  | //   const getResponse = await request.get(
+  49  | //     `https://api-testing-postman.vercel.app/api/v1/users/current-user`,
+  50  | //     {
+  51  | //       headers: {
+  52  | //         Authorization: `Bearer ${token}`
+  53  | //       }
+  54  | //     }
+  55  | //   );
+  56  | //     console.log('Status:', getResponse.status());
+  57  | //     console.log('Response:', await getResponse.json());
+  58  | //   expect(getResponse.status()).toBe(200);
+  59  | // });
+  60  |  
+  61  |  
+  62  | //put/update
+  63  | //1
+  64  | // test('Update User API Test', async ({ request }) => {
+  65  |  
+  66  | //   const tokenResponse = await request.post(
+  67  | //     'https://api-testing-postman.vercel.app/api/v1/users/login',
+  68  | //     {
+  69  | //       data: {
+  70  | //         username: 'asimali_update',
+  71  | //         email: 'asimali_updated@gmail.com',
+  72  | //         password: 'Asim123$'
+  73  | //       }
+  74  | //     }
+  75  | //   );
+  76  |  
+  77  | //   const tokenData = await tokenResponse.json();
+  78  | //   const token = tokenData.token;
+  79  |  
+  80  | //   const updateResponse = await request.put(
+  81  | //     'https://api-testing-postman.vercel.app/api/v1/users/replace-account',
+  82  | //     {
+  83  | //       headers: {
+  84  | //         Authorization: `Bearer ${token}`
+  85  | //       },
+  86  |  
+  87  | //       data: {
+  88  | //         fullname: 'Asim Ali',
+  89  | //         email: 'asimali@gmail.com',
+  90  | //         username: 'asimali01'
+  91  | //       }
+  92  | //     }
+  93  | //   );
+  94  |  
+  95  | //   console.log('Status:', updateResponse.status());
+  96  | //   console.log('Response:', await updateResponse.json());
+  97  |  
+  98  | //   expect(updateResponse.status()).toBe(200);
+  99  | // });
+  100 |  
+  101 |  
+  102 |  
+  103 | //2
+  104 | test('Update User API Test', async ({ request }) => {
+  105 |  
+  106 |   const tokenResponse = await request.post(
+  107 |     'https://api-testing-postman.vercel.app/api/v1/users/login',
+  108 |     {
+  109 |       data: {
+  110 |         username: 'asimali01',
+  111 |         email: 'asimali@gmail.com',
+  112 |         password: 'Asim123$'
+  113 |       }
+  114 |     }
+  115 |   );
+  116 |  
+  117 |   console.log('Login Status:', tokenResponse.status());
+  118 |  
+  119 |   const tokenData = await tokenResponse.json();
+  120 |   console.log('Login Response:', tokenData);
+  121 |  
+  122 |   const token = tokenData.token;
+  123 |  
+  124 |   const updateResponse = await request.put(
+  125 |     'https://api-testing-postman.vercel.app/api/v1/users/replace-account',
+  126 |     {
+  127 |       headers: {
+  128 |         Authorization: `Bearer ${token}`
+  129 |       },
+  130 |  
+  131 |       data: {
+  132 |         fullname: 'Asim Ali Updated',
+  133 |         email: 'asimali_updated@gmail.com',
+  134 |         username: 'asimali_updated1'
+  135 |       }
+  136 |     }
+  137 |   );
+  138 |  
+  139 |   console.log('Update Status:', updateResponse.status());
+  140 |   console.log('Update Response:', await updateResponse.json());
+  141 |  
+> 142 |   expect(updateResponse.status()).toBe(200);
+      |                                   ^ Error: expect(received).toBe(expected) // Object.is equality
+  143 | });
+  144 |  
+  145 |  
+  146 |  
+  147 | //delete
+  148 |  
+  149 | // test('Delete User API Test', async ({ request }) => {
+  150 | //   const tokenResponse = await request.post(
+  151 | //     'https://api-testing-postman.vercel.app/api/v1/users/login',
+  152 | //     {
+  153 | //        data: {
+  154 | //         "username": "asimali01",
+  155 | //         "email": "asimali@gmail.com",
+  156 | //         "password": "Asim123$"
+  157 | //       }
+  158 | //     }
+  159 | //   );
+  160 |  
+  161 | //   const tokenData = await tokenResponse.json();
+  162 | //   const token = tokenData.token;
+  163 | //   const deleteResponse = await request.delete(
+  164 | //     `https://api-testing-postman.vercel.app/api/v1/users/delete-account`,
+  165 | //     {
+  166 | //       headers: {
+  167 | //         Authorization: `Bearer ${token}`
+  168 | //       }
+  169 | //     }
+  170 | //   );
+  171 | //         console.log('Status:', deleteResponse.status());
+  172 | //         console.log('Response:', await deleteResponse.json());
+  173 | //   expect(deleteResponse.status()).toBe(200);
+  174 | // });
+  175 |  
+```

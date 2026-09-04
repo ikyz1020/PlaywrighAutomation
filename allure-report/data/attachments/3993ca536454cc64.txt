@@ -1,0 +1,15 @@
+Status: 201
+Response: {
+  statusCode: 200,
+  data: {
+    _id: '6a93fc1e059cfa3c7211dfb7',
+    username: 'asim987654321',
+    email: 'asim987654321@example.com',
+    fullname: 'Asim Ali',
+    createdAt: '2026-08-30T09:47:10.320Z',
+    updatedAt: '2026-08-30T09:47:10.320Z',
+    __v: 0
+  },
+  message: 'User registered Successfully',
+  success: true
+}

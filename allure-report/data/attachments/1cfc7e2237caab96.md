@@ -1,0 +1,53 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: tests\api.spec.js >> Get All Books API Test
+- Location: tests\api.spec.js:22:5
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 404
+Received: 200
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | 
+  3  | //1
+  4  | // test('Get All Books API Test', async ({request}) => {
+  5  | // const response = await request.get('https://demoqa.com/BookStore/v1/Books');
+  6  | // console.log(await response.json());
+  7  | // expect(response.status()).toBe(200);
+  8  |  
+  9  |  
+  10 | // });
+  11 | 
+  12 | //2 fail due to Book
+  13 | // test('Get All Books API Test', async ({request}) => {
+  14 | // const response = await request.get('https://demoqa.com/BookStore/v1/Book');
+  15 | // console.log(await response.json());
+  16 | // expect(response.status()).toBe(200);
+  17 |  
+  18 |  
+  19 | // });
+  20 | 
+  21 | //3
+  22 | test('Get All Books API Test', async ({request}) => {
+  23 | const response = await request.get('https://demoqa.com/BookStore/v1/Books');
+  24 | console.log(await response.json());
+> 25 | expect(response.status()).toBe(404);
+     |                           ^ Error: expect(received).toBe(expected) // Object.is equality
+  26 |  
+  27 |  
+  28 | });
+```

@@ -1,0 +1,16 @@
+Update Status: 200
+Update Response: {
+  statusCode: 200,
+  data: {
+    _id: '6a97bd20983b237fcd408a95',
+    username: 'ismailkhanupdated1788329251303',
+    email: 'ismailkhanupdated1788329251303@gmail.com',
+    fullname: 'Ismail Khan Updated',
+    createdAt: '2026-09-02T06:07:28.780Z',
+    updatedAt: '2026-09-02T06:07:31.723Z',
+    __v: 0,
+    refreshToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2YTk3YmQyMDk4M2IyMzdmY2Q0MDhhOTUiLCJlbWFpbCI6ImlzbWFpbGtoYW4xNzg4MzI5MjQ4MTIxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiSXNtYWlsIEtoYW4iLCJpYXQiOjE3ODgzMjkyNTAsImV4cCI6MTc4OTE5MzI1MH0.G_tWyy5tZw9gpvPqXagoBlZBs5vP05jCD0URmRejiRk'
+  },
+  message: 'User details replaced successfully',
+  success: true
+}
