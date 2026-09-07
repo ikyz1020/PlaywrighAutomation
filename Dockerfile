@@ -8,6 +8,4 @@ RUN npm install
 
 COPY . .
 
-RUN mkdir -p /app/playwright-report && chmod -R 777 /app/playwright-report
-
 CMD ["npx", "playwright", "test"]
