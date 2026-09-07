@@ -49,7 +49,7 @@ test('Login User API Test', async ({ request }) => {
   const responseData = await response.json();
  
   console.log('Login Status:', response.status());
-  console.log('Login Response:', responseData);
+ 
  
   token = responseData.data.accessToken;
  
@@ -70,7 +70,7 @@ test('Get Current User API Test', async ({ request }) => {
   );
  
   console.log('Get Status:', response.status());
-  console.log('Get Response:', await response.json());
+ 
  
   expect(response.status()).toBe(200);
 });
@@ -96,7 +96,7 @@ test('Update User API Test', async ({ request }) => {
   );
  
   console.log('Update Status:', response.status());
-  console.log('Update Response:', await response.json());
+  
  
   expect(response.status()).toBe(200);
  
@@ -122,7 +122,7 @@ test('Login With Updated User API Test', async ({ request }) => {
   const responseData = await response.json();
  
   console.log('Updated Login Status:', response.status());
-  console.log('Updated Login Response:', responseData);
+  
  
   token = responseData.data.accessToken;
  
@@ -143,7 +143,6 @@ test('Delete Updated User API Test', async ({ request }) => {
   );
  
   console.log('Delete Status:', response.status());
-  console.log('Delete Response:', await response.json());
  
   expect(response.status()).toBe(200);
 });
